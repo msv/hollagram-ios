@@ -1,8 +1,8 @@
 //
 //  Whisper.m
-//  base-project
+//  hollagram
 //
-//  Created by Sidney Maestre on 1/18/13.
+//  Created by Matt Vaznaian on 2/21/13.
 //  Copyright (c) 2013 StackMob. All rights reserved.
 //
 
@@ -12,8 +12,10 @@
 
 @implementation Whisper
 
+@dynamic createddate;
 @dynamic desc;
+@dynamic url;
 @dynamic whisperId;
-@dynamic user;
+@dynamic users;
 
 @end

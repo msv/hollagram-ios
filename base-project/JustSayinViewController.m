@@ -146,7 +146,7 @@
                     User *loggedInUserManagedObject = [users objectAtIndex:0];
                     
                     // ADD RELATIONSHIP to Logged in User
-                    [newManagedObject addUserObject:loggedInUserManagedObject];
+                    [newManagedObject addUsersObject:loggedInUserManagedObject];
                    
                     
                     // FETCH the USER you are whispering too.
@@ -166,7 +166,7 @@
                         User *userManagedObject2 = [users2 objectAtIndex:0];
                         
                         // ADD RELATIONSHIP to USER you are whispering too
-                        [newManagedObject addUserObject:userManagedObject2];
+                        [newManagedObject addUsersObject:userManagedObject2];
                     }
                     
                     // SAVE WHISPER and RELATIONSHIPS

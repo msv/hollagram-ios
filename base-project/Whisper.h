@@ -1,8 +1,8 @@
 //
 //  Whisper.h
-//  base-project
+//  hollagram
 //
-//  Created by Sidney Maestre on 1/18/13.
+//  Created by Matt Vaznaian on 2/21/13.
 //  Copyright (c) 2013 StackMob. All rights reserved.
 //
 
@@ -13,16 +13,18 @@
 
 @interface Whisper : NSManagedObject
 
+@property (nonatomic, retain) NSDate * createddate;
 @property (nonatomic, retain) NSString * desc;
+@property (nonatomic, retain) NSString * url;
 @property (nonatomic, retain) NSString * whisperId;
-@property (nonatomic, retain) NSSet *user;
+@property (nonatomic, retain) NSSet *users;
 @end
 
 @interface Whisper (CoreDataGeneratedAccessors)
 
-- (void)addUserObject:(User *)value;
-- (void)removeUserObject:(User *)value;
-- (void)addUser:(NSSet *)values;
-- (void)removeUser:(NSSet *)values;
+- (void)addUsersObject:(User *)value;
+- (void)removeUsersObject:(User *)value;
+- (void)addUsers:(NSSet *)values;
+- (void)removeUsers:(NSSet *)values;
 
 @end
