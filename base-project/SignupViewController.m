@@ -61,6 +61,7 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
+/* CREATE OUR USER */
 - (IBAction)createUser:(id)sender {
     
     User *newUser = [[User alloc] initIntoManagedObjectContext:self.managedObjectContext];

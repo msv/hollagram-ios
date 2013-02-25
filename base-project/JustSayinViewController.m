@@ -141,7 +141,7 @@
                     [fetchRequest setPredicate:equalPredicate];
                     
                     error = nil;
-                    NSArray *users = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+                    NSArray *users = [self.managedObjectContext executeFetchRequestAndWait:fetchRequest error:&error];
              
                     User *loggedInUserManagedObject = [users objectAtIndex:0];
                     
@@ -159,7 +159,7 @@
                     
                     
                     error = nil;
-                    NSArray *users2 = [self.managedObjectContext executeFetchRequest:fetchRequest2 error:&error];
+                    NSArray *users2 = [self.managedObjectContext executeFetchRequestAndWait:fetchRequest2 error:&error];
                     
                     // IF YOU FIND A USERNAME MATCH
                     if([users2 count] > 0) {

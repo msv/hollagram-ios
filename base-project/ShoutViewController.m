@@ -105,6 +105,7 @@
     
     [fetchRequest setSortDescriptors:sortDescriptors];
  
+    /* FETCH ALL SHOUTS */
     [self.managedObjectContext executeFetchRequest:fetchRequest onSuccess:^(NSArray *results) {
         self.shoutArray = results;
         [self.tableView reloadData];
@@ -155,8 +156,8 @@
     NSPredicate *equalPredicate =[NSPredicate predicateWithFormat:@"username == %@", username];
     [fetchRequest setPredicate:equalPredicate];
     
-    
-    NSArray *users = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    /* FETCH USER WHO SHOUTED */
+    NSArray *users = [self.managedObjectContext executeFetchRequestAndWait:fetchRequest error:&error];
     
     User *userManagedObject = [users objectAtIndex:0];
     
