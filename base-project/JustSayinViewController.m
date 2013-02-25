@@ -11,6 +11,7 @@
 #import "Whisper.h"
 #import "User.h"
 #import "StackMob.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface JustSayinViewController ()
 
@@ -44,6 +45,7 @@
     self.urlField.delegate = self;
     self.usernameField.delegate = self;
     self.client = [SMClient defaultClient];
+    [[[self messageField] layer] setBorderWidth:2.0f];
 }
 
 
